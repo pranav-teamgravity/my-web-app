@@ -1,74 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Web App</title>
+  <title>MyApp</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
-  <!-- Splash Page -->
-  <div id="splash">
+  <!-- Splash -->
+  <div id="splash" class="splash">
     <div class="logo">
-      <img src="assets/logo.png" alt="Logo" />
       <h1>MyApp</h1>
       <p>Loading...</p>
     </div>
   </div>
 
-  <!-- Home Page -->
-  <div id="home" class="hidden page">
-    <header>
-      <h2>Welcome to MyApp</h2>
+  <!-- App Container -->
+  <div id="app" class="hidden">
+
+    <!-- Header -->
+    <header class="header">
+      <button id="backBtn" class="back-btn hidden">⬅</button>
+      <h2 id="pageTitle">Home</h2>
     </header>
 
-    <main>
-      <div class="cards">
-        <div class="card" data-page="page1">Card 1</div>
-        <div class="card" data-page="page2">Card 2</div>
-        <div class="card" data-page="page3">Card 3</div>
+    <!-- Pages -->
+    <main class="content">
+
+      <div id="home" class="page">
+        <div class="cards">
+          <div class="card" data-page="page1">Card 1</div>
+          <div class="card" data-page="page2">Card 2</div>
+          <div class="card" data-page="page3">Card 3</div>
+        </div>
       </div>
+
+      <div id="page1" class="page hidden">
+        <p>This is Page 1 content.</p>
+      </div>
+
+      <div id="page2" class="page hidden">
+        <p>This is Page 2 content.</p>
+      </div>
+
+      <div id="page3" class="page hidden">
+        <p>This is Page 3 content.</p>
+      </div>
+
+      <div id="search" class="page hidden">
+        <p>Search page content.</p>
+      </div>
+
+      <div id="favorites" class="page hidden">
+        <p>Favorites page content.</p>
+      </div>
+
+      <div id="settings" class="page hidden">
+        <p>Settings page content.</p>
+      </div>
+
     </main>
 
+    <!-- Bottom Nav -->
     <nav class="bottom-nav">
-      <button class="nav-item active" data-page="home">🏠 Home</button>
-      <button class="nav-item" data-page="search">🔍 Search</button>
-      <button class="nav-item" data-page="favorites">❤️ Favorites</button>
-      <button class="nav-item" data-page="settings">⚙️ Settings</button>
+      <button data-page="home" class="nav-item active">🏠</button>
+      <button data-page="search" class="nav-item">🔍</button>
+      <button data-page="favorites" class="nav-item">❤️</button>
+      <button data-page="settings" class="nav-item">⚙️</button>
     </nav>
-  </div>
 
-  <!-- Other Pages -->
-  <div id="page1" class="hidden page">
-    <header><h2>Page 1</h2></header>
-    <main><p>This is Page 1 content.</p></main>
-  </div>
-
-  <div id="page2" class="hidden page">
-    <header><h2>Page 2</h2></header>
-    <main><p>This is Page 2 content.</p></main>
-  </div>
-
-  <div id="page3" class="hidden page">
-    <header><h2>Page 3</h2></header>
-    <main><p>This is Page 3 content.</p></main>
-  </div>
-
-  <div id="search" class="hidden page">
-    <header><h2>Search</h2></header>
-    <main><p>Search page content.</p></main>
-  </div>
-
-  <div id="favorites" class="hidden page">
-    <header><h2>Favorites</h2></header>
-    <main><p>Favorites page content.</p></main>
-  </div>
-
-  <div id="settings" class="hidden page">
-    <header><h2>Settings</h2></header>
-    <main><p>Settings page content.</p></main>
   </div>
 
   <script src="script.js"></script>
